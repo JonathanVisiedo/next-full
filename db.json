@@ -1,0 +1,28 @@
+{
+  "news": [
+    {
+      "id": 1,
+      "title":"NBA | The Chicago bulls win the cup!",
+      "description": "Description 1",
+      "category": "sports"
+    },
+    {
+      "id": 1,
+      "title":"NBA | Orlando is out!",
+      "description": "Description 1",
+      "category": "sports"
+    },
+    {
+      "id": 2,
+      "title":"China | Covid is under control",
+      "description": "Description 2",
+      "category": "politics"
+    },
+    {
+      "id": 3,
+      "title":"Nvidia | The new RTX 4080 is a beast!",
+      "description": "Description 3",
+      "category": "technology"
+    }
+  ]
+}
