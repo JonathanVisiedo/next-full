@@ -16,10 +16,16 @@ const Home = ({users}) => {
 
         <div style={{marginTop: "2px"}}>
             <div>
+                <Link href="/dashboard">Dashboard</Link>
+            </div>
+            <div>
                 <Link href="/blog">Blog</Link>
             </div>
             <div>
                 <Link href="/news">News</Link>
+            </div>
+            <div>
+                <Link href="/events">Events</Link>
             </div>
             <div>
                 <Link href="/product">Product</Link>

@@ -16,6 +16,22 @@ a {
 }
 
 
+button {
+  outline:unset;
+  border:unset;
+  background: #fb503b;
+  color: #fff;
+  padding: 5px 15px;
+  cursor: pointer;
+  transition: background .3s ease;
+}
+
+button:hover, button.active {
+  background: #b33727;
+  transition: background .3s ease;
+}
+
+
 a {
   color: #fb503b;
   transition-duration: .3s;
