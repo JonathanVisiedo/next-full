@@ -11,7 +11,7 @@ const Home = ({users}) => {
         router.push('/product')
     }
 
-    return <div style={{ width:"1100px", margin:"0 auto" }}>
+    return <div className={'container'}>
         <h1>Hello world</h1>
 
         <div style={{marginTop: "2px"}}>
@@ -30,6 +30,10 @@ const Home = ({users}) => {
             <div>
                 <Link href="/events">Events</Link>
             </div>
+            <div>
+                <Link href="/about">About</Link>
+            </div>
+
             <div>
                 <Link href="/product">Product</Link>
             </div>
