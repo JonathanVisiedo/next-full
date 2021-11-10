@@ -9,7 +9,8 @@ const Category = ({ articles, category }) => {
         <h1>List of news <i style={{color: "grey"}}>{category}</i></h1>
         {
             articles.map((article, idx) => {
-                return <Article article={article} key={`a${article.id}`}/>
+                
+                return <Article article={article} key={`ac${article.id}`}/>
             })
         }
     </div>
@@ -20,7 +21,11 @@ export default Category
 
 
 export async function getServerSideProps (context) {
+
     const { params, req, res } = context
+
+    res.setHeader('Set-Cookie', ['name=John'])
+
     const response = await fetch(`http://localhost:4000/news?category=${params.category}`)
     const articles = await response.json()
 

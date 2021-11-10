@@ -7,19 +7,19 @@
       "category": "sports"
     },
     {
-      "id": 1,
+      "id": 2,
       "title":"NBA | Orlando is out!",
       "description": "Description 1",
       "category": "sports"
     },
     {
-      "id": 2,
+      "id": 3,
       "title":"China | Covid is under control",
       "description": "Description 2",
       "category": "politics"
     },
     {
-      "id": 3,
+      "id": 4,
       "title":"Nvidia | The new RTX 4080 is a beast!",
       "description": "Description 3",
       "category": "technology"
