@@ -11,7 +11,7 @@ const Home = ({users}) => {
         router.push('/product')
     }
 
-    return <div className={'container'}>
+    return <div className='container'>
         <h1>Hello world</h1>
 
         <div style={{marginTop: "2px"}}>

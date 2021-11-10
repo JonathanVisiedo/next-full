@@ -1,6 +1,7 @@
 import styles from '../styles/About.module.scss'
 import Link from 'next/link'
 import styled from "styled-components";
+import Footer from "../components/Partials/Footer";
 
 
 const Title = styled.h1`
@@ -17,7 +18,7 @@ const Paragraph = styled.p`
 
 const About = () => {
 
-    return <div  className={'container'}>
+    return <div  className='container'>
         <Link href="/">Back to homepage</Link>
         <Title>About</Title>
         <Paragraph>
@@ -29,3 +30,10 @@ const About = () => {
 
 
 export default About
+
+About.getLayout = function PageLayout(page) {
+    return <>
+        {page}
+        <Footer/>
+    </>
+}
