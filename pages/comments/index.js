@@ -22,9 +22,21 @@ const CommentList = () => {
         })
 
         const data = await response.json()
+        await fetchComments()
         setComment('')
     }
 
+    const deleteComment = async commentId => {
+        const response = await fetch(`http://localhost:3000/api/comments/${commentId}`, {
+            method:'DELETE',
+            body: JSON.stringify(commentId),
+            headers:{
+                'Content-type': 'applicatino/json'
+            }
+        })
+        const data = await response.json()
+        await fetchComments()
+    }
 
     return <div style={{width: "775px", margin: "0 auto"}}>
         <div><Link href="/">Back to homepage</Link></div>
@@ -41,7 +53,7 @@ const CommentList = () => {
         <div>
             <ul>
                 {comments.map((comment) => {
-                    return <li key={`c${comment.id}`}>{comment.id} - {comment.text}</li>
+                    return <li key={`c${comment.id}`}>{comment.id} - {comment.text} <button className={'dynamic'} onClick={() => deleteComment(comment.id)}>&times;</button></li>
                 })}
             </ul>
         </div>

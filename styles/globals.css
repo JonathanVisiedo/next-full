@@ -36,6 +36,24 @@ input {
 }
 
 
+ul {
+    list-style: none;
+    padding-left:0;
+}
+
+li {
+    padding: 5px 0;
+}
+
+li > .dynamic {
+    display: none;
+}
+
+li:hover > .dynamic{
+    display: inline-block;
+}
+
+
 a {
     color: #fb503b;
     transition-duration: .3s;
