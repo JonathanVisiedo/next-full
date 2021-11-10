@@ -22,6 +22,9 @@ const Home = ({users}) => {
                 <Link href="/blog">Blog</Link>
             </div>
             <div>
+                <Link href="/comments">Comments</Link>
+            </div>
+            <div>
                 <Link href="/news">News</Link>
             </div>
             <div>
