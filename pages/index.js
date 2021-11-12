@@ -15,51 +15,22 @@ const Home = ({users}) => {
 
     return <div className='container'>
         <h1>Hello world <small>Analytics: {process.env.NEXT_PUBLIC_ANALYTICS_ID}</small></h1>
+        <button onClick={handleClick}>
+            PLACE ORDER
+        </button>
 
-        <div className={'navigation'}>
-            <div>
-                <Link href="/dashboard">Dashboard</Link>
-            </div>
-            <div>
-                <Link href="/blog">Blog</Link>
-            </div>
-            <div>
-                <Link href="/comments">Comments</Link>
-            </div>
-            <div>
-                <Link href="/news">News</Link>
-            </div>
-            <div>
-                <Link href="/events">Events</Link>
-            </div>
-            <div>
-                <Link href="/about">About</Link>
-            </div>
+        <div style={{margin:"20px 0"}}>
+            <Image src={img} alt="" placeholder='blur' width={450} height={240}/>
+            <Image src="/1.jpg" alt="" width={450} height={240} placeholder={''}/>
+        </div>
 
-            <div>
-                <Link href="/product">Product</Link>
-            </div>
-            <div>
-                <Link href="/docs">Docs</Link>
-            </div>
-
-            <button onClick={handleClick}>
-                PLACE ORDER
-            </button>
-
-            <div style={{margin:"20px 0"}}>
-                <Image src={img} alt="" placeholder='blur' width={450} height={240}/>
-                <Image src="/1.jpg" alt="" width={450} height={240} placeholder={''}/>
-            </div>
-
-            <h1>Users list</h1>
-            <div style={{ marginTop: "10px", marginBottom: "10px"}}>
-                {
-                    users.map((user, idx) => {
-                        return <User user={user} key={`u${user.id}`}/>
-                    })
-                }
-            </div>
+        <h1>Users list</h1>
+        <div style={{ marginTop: "10px", marginBottom: "10px"}}>
+            {
+                users.map((user, idx) => {
+                    return <User user={user} key={`u${user.id}`}/>
+                })
+            }
         </div>
     </div>
 }

@@ -3,6 +3,9 @@ import '../styles/globals.css'
 import { ThemeProvider } from "styled-components";
 import Header from "../components/Partials/Header";
 import Footer from "../components/Partials/Footer";
+import { UserProvider } from '@auth0/nextjs-auth0'
+
+
 
 const theme = {
   colors: {
@@ -14,17 +17,21 @@ function MyApp({ Component, pageProps }) {
 
   if(Component.getLayout) {
     return Component.getLayout(
-        <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
-        </ThemeProvider>
+        <UserProvider loginUrl="/api/auth/login" profileUrl="/api/auth/me">
+          <ThemeProvider theme={theme}>
+            <Component {...pageProps} />
+          </ThemeProvider>
+        </UserProvider>
     )
   }
 
-  return <ThemeProvider theme={theme}>
-    <Header />
-    <Component {...pageProps} />
-    <Footer />
-  </ThemeProvider>
+  return <UserProvider loginUrl="/api/auth/login" profileUrl="/api/auth/me">
+    <ThemeProvider theme={theme}>
+      <Header />
+      <Component {...pageProps} />
+      <Footer />
+    </ThemeProvider>
+  </UserProvider>
 }
 
 export default MyApp
