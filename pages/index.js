@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import {useRouter} from "next/router";
-import User from "../components/User";
+import User from "components/User";
+import Image from 'next/image'
+import img from 'public/1.jpg'
 
 const Home = ({users}) => {
 
@@ -44,6 +46,11 @@ const Home = ({users}) => {
             <button onClick={handleClick}>
                 PLACE ORDER
             </button>
+
+            <div style={{margin:"20px 0"}}>
+                <Image src={img} alt="" placeholder='blur' width={450} height={240}/>
+                <Image src="/1.jpg" alt="" width={450} height={240} placeholder={''}/>
+            </div>
 
             <h1>Users list</h1>
             <div style={{ marginTop: "10px", marginBottom: "10px"}}>

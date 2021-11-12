@@ -2,7 +2,7 @@ import styles from '../styles/About.module.scss'
 import Link from 'next/link'
 import styled from "styled-components";
 import Footer from "../components/Partials/Footer";
-
+import Head from "next/head";
 
 const Title = styled.h1`
   font-size: 62px;
@@ -19,6 +19,11 @@ const Paragraph = styled.p`
 const About = () => {
 
     return <div  className='container'>
+        <Head>
+            <title>Codevolution | About</title>
+            <meta name='description' content={'Free tutorials'}/>
+            <link rel="icon" href="/favicon.ico"/>
+        </Head>
         <Link href="/">Back to homepage</Link>
         <Title>About</Title>
         <Paragraph>
