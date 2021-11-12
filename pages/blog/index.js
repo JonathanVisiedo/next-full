@@ -21,6 +21,9 @@ export default Blog
 
 export async function getStaticProps() {
 
+    const user = process.env.DB_USER
+    const password = process.env.DB_PASSWORD
+
     const fetchPost = await fetch('https://jsonplaceholder.typicode.com/posts')
     let posts = await fetchPost.json()
 
