@@ -16,7 +16,7 @@ const Home = ({users}) => {
     return <div className='container'>
         <h1>Hello world <small>Analytics: {process.env.NEXT_PUBLIC_ANALYTICS_ID}</small></h1>
 
-        <div style={{marginTop: "2px"}}>
+        <div className={'navigation'}>
             <div>
                 <Link href="/dashboard">Dashboard</Link>
             </div>
