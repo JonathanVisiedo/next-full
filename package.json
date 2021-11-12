@@ -5,6 +5,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "export": "next build && next export",
     "lint": "next lint",
     "serve-json": "json-server --watch db.json --port 4000"
   },
@@ -17,6 +18,7 @@
     "swr": "^1.0.1"
   },
   "devDependencies": {
+    "@types/react": "^17.0.34",
     "eslint": "7.32.0",
     "eslint-config-next": "12.0.3"
   }
